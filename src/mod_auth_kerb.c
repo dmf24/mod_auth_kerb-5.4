@@ -2068,7 +2068,7 @@ have_rcache_type(const char *type)
    found = (ret == 0);
 
    if (ret == 0)
-      krb5_rc_close(context, id); /* Use krb5_rc_close instead of krb5_rc_destroy */
+      krb5_rc_destroy(context, id);
    krb5_free_context(context);
 
    return found;
